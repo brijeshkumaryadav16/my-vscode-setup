@@ -69,6 +69,9 @@ Here's the content of my `settings.json` for VS Code:
   "terminal.integrated.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.shellIntegration.decorationsEnabled": "gutter",
+  "terminal.integrated.defaultProfile.osx": "zsh", // Mac
+  "terminal.integrated.defaultProfile.linux": "bash", // Linux
+  "terminal.integrated.defaultProfile.windows": "Command Prompt", // Window
 
   // Git Settings
   "git.enableSmartCommit": true,
@@ -92,12 +95,6 @@ Here's the content of my `settings.json` for VS Code:
     "dist": true,
     ".next": true,
     "build": true
-  },
-
-  // Tailwind Class Regex for IntelliSense
-  "tailwindCSS.experimental.classRegex": [
-    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+  }
 }
 ```
