@@ -1,41 +1,59 @@
-# 💻 VS Code Setup for Frontend Developers
+# 💻 My VSCode Setup
 
-> My personal Visual Studio Code configuration for frontend development using React, Next.js, TypeScript, Tailwind CSS, and GitHub Copilot.
-
----
-
-## ✨ Extensions
-
-| Extension                 | Description                            |
-| ------------------------- | -------------------------------------- |
-| Auto Close Tag            | Automatically adds closing tags        |
-| Auto Rename Tag           | Renames paired HTML/XML tags           |
-| Better Comments           | Organize comments with colors          |
-| Code Spell Checker        | Finds typos in code                    |
-| DotENV                    | Syntax highlighting for `.env` files   |
-| Error Lens                | Shows inline errors and warnings       |
-| ES7+ React/Redux Snippets | Shorthand snippets for React and Redux |
-| ESLint                    | Integrates ESLint with VS Code         |
-| GitHub Copilot            | AI pair programmer                     |
-| GitHub Copilot Chat       | Chat-based AI code support             |
-| gitignore                 | Syntax support for `.gitignore`        |
-| GitLens                   | Powerful Git insights                  |
-| Import Cost               | Shows size of imported npm packages    |
-| JavaScript (ES6) Snippets | Common JavaScript snippets             |
-| Live Server (Five Server) | Local dev server with live reload      |
-| Markdown Preview Enhanced | Rich markdown preview                  |
-| npm Intellisense          | Autocompletes npm module imports       |
-| Path Intellisense         | Autocompletes relative file paths      |
-| Prettier - Code Formatter | Format your code consistently          |
-| Tailwind CSS IntelliSense | IntelliSense for Tailwind classes      |
-| Thunder Client            | Lightweight REST client                |
-| VS Code Icons             | File icons for your workspace          |
+This is my personal VS Code setup for frontend development. Feel free to use or adapt it for your own workflow!
 
 ---
 
-## ⚙️ Settings
+## 1. Install VS Code
 
-Here's the content of my `settings.json` for VS Code:
+- Download from [code.visualstudio.com](https://code.visualstudio.com/)
+
+---
+
+## 2. Recommended Extensions
+
+Search and install these extensions in VS Code. These help with code quality, productivity, and GitHub collaboration:
+
+- Auto Close Tag
+- Auto Rename Tag
+- Better Comments
+- Code Spell Checker
+- DotENV
+- Error Lens
+- ES7+ React/Redux Snippets
+- ESLint
+- GitHub Copilot
+- Github Copilot Chat
+- gitignore
+- GitLens
+- Import Cost
+- JavaScript (ES6) Snippets
+- Live Server (Five Server)
+- Markdown Preview Enhanced
+- markdownlint
+- MDX
+- npm Intellisense
+- Path Intellisense
+- Prettier - Code Formatter
+- Tailwind CSS IntelliSense
+- vscode-icons
+
+---
+
+## 3. Install Fira Code Font
+
+Fira Code improves code readability with ligatures.
+
+- Download from [Fira Code GitHub Releases](https://github.com/tonsky/FiraCode/releases)
+- Install the font on your system (double-click and "Install" on Mac/Windows)
+- In VS Code, go to Settings → search "Font Family" → set to: `Fira Code, Consolas, 'Courier New', monospace`
+- Enable font ligatures: search "Font Ligatures" in Settings and check the box
+
+---
+
+## 4. VS Code Settings
+
+Copy and paste into your `settings.json` (open Command Palette → Preferences: Open Settings (JSON)):
 
 ```json
 {
@@ -58,8 +76,10 @@ Here's the content of my `settings.json` for VS Code:
   "workbench.startupEditor": "none",
   "editor.accessibilitySupport": "off",
 
+  // Workbench Settings
+  "workbench.iconTheme": "vscode-icons",
+
   // File Management
-  "files.autoSave": "onFocusChange",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
@@ -69,9 +89,11 @@ Here's the content of my `settings.json` for VS Code:
   "terminal.integrated.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.shellIntegration.decorationsEnabled": "gutter",
-  "terminal.integrated.defaultProfile.osx": "zsh", // Mac
-  "terminal.integrated.defaultProfile.linux": "bash", // Linux
-  "terminal.integrated.defaultProfile.windows": "Command Prompt", // Window
+  "terminal.integrated.defaultProfile.osx": "zsh", // Window "PowerShell", Linux "bash" and Mac "zsh"
+  "terminal.integrated.scrollback": 1000,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.suggest.enabled": true,
 
   // Git Settings
   "git.enableSmartCommit": true,
@@ -83,18 +105,15 @@ Here's the content of my `settings.json` for VS Code:
   },
   "github.copilot.nextEditSuggestions.enabled": true,
 
-  // Folder Excludes
-  "files.exclude": {
-    "node_modules": true,
-    "dist": true,
-    ".next": true,
-    "build": true
-  },
+  // Search & File Exclusions
   "search.exclude": {
     "node_modules": true,
     "dist": true,
     ".next": true,
-    "build": true
+    "build": true,
+    ".git": true
   }
 }
 ```
+
+Thanks for checking out my VS Code setup.
