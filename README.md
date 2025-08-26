@@ -78,6 +78,10 @@ Copy and paste into your `settings.json` (open Command Palette → Preferences: 
 
   // Workbench Settings
   "workbench.iconTheme": "vscode-icons",
+  // The following setting ensures that files with the `.svg` extension open in the default code editor, allowing you to view and edit the SVG source code directly instead of seeing an icon preview.
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
 
   // File Management
   "javascript.updateImportsOnFileMove.enabled": "always",
